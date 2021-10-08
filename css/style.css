@@ -1,0 +1,225 @@
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+body {
+  font-family: 'Ubunto Condensed', Arial, sans-serif;
+  font-weight: bold;
+  background: #ecedee;
+}
+
+header h1 {
+  font-size: 3em;
+  color: #386878;
+  font-weight: bold;
+}
+
+header h2 {
+  font-size: 1.8em;
+  color: #939597;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+main {
+  min-height: 75vh;
+  background: url("../images/circle.png") no-repeat center;
+}
+
+#action-zone {
+  position: relative;
+  height: 775px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#stop-watch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#watch {
+  top: -10px;
+}
+
+#pointer {
+  top: -20px;
+  left: -2px;
+}
+
+a.click-zone {
+  display: block;
+  width: 95px;
+  height: 95px;
+  cursor: pointer;
+}
+
+#rocket {
+  background: url("../images/rocket.png") no-repeat center;
+  position: absolute;
+  left: -123px;
+  top: 350px;
+}
+
+#rocket:hover, #rocket.collected {
+  background: url("../images/rocket_h.png") no-repeat center;
+}
+
+#lamp {
+  background: url("../images/lamp.png") no-repeat center;
+  position: absolute;
+  left: 0;
+  top: 70px;
+  right: 0;
+  margin: auto;
+}
+
+#lamp:hover, #lamp.collected {
+  background: url("../images/lamp_h.png") no-repeat center;
+}
+
+#vitro {
+  background: url("../images/vitro.png") no-repeat center;
+  position: absolute;
+  right: -123px;
+  top: 350px;
+}
+
+#vitro:hover, #vitro.collected {
+  background: url("../images/vitro_h.png") no-repeat center;
+}
+
+.miliseconds {
+  -webkit-animation: rotate 60s infinite linear;
+          animation: rotate 60s infinite linear;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+}
+
+#results {
+  margin: 10px 0 20px;
+}
+
+#results button {
+  border-radius: 0;
+  margin-right: 5px;
+  padding: 5px 20px;
+}
+
+#high_scores h3 {
+  font-weight: bold;
+  color: #939597;
+  margin-bottom: 20px;
+}
+
+table thead {
+  background: #808080;
+}
+
+table thead th {
+  color: #ffffff;
+  text-align: center;
+  padding: 0;
+}
+
+table thead th .orderBy {
+  display: block;
+  color: #fff;
+  cursor: pointer;
+}
+
+table thead th a {
+  position: relative;
+}
+
+table thead th a:before, table thead th a:after {
+  font-family: 'Glyphicons Halflings';
+  content: '\e253';
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+
+table thead th a:before {
+  top: -5px;
+}
+
+table thead th a:after {
+  top: -5px;
+}
+
+table thead th.headerSortUp a:before, table thead th.headerSortDown a:before {
+  content: '';
+}
+
+table thead th.headerSortUp a:after, table thead th.headerSortDown a:after {
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  float: right;
+  top: 0;
+}
+
+table thead th.headerSortUp a:after {
+  content: '\e253';
+}
+
+table thead th.headerSortDown a:after {
+  content: '\e252';
+}
+
+table tbody td {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-family: Lato, Arial, sans-serif;
+  color: #000;
+}
+
+table tbody td .showGraph {
+  cursor: pointer;
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */
